@@ -6,15 +6,16 @@ Take a look at the following code:
 
 ```
 1    let x = 1;
-2    function f1()
-3    {
-4        let x = 2;
-5        console.log(x);
-6    }
-7    console.log(x);
+2    function f1() {
+3        let x = 2;
+4        console.log(x);
+5    }
+6    console.log(x);
 ```
 
 Explain why line 4 and line 6 output different numbers.
+
+In line 4 x is local variable of function f1 and in line 6 x is a global variable which defined in line 1.
 
 ## Question 2
 
@@ -34,6 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+console.log(f1()) and console.log(y) will print undefine variable.
 
 ## Question 3
 
@@ -62,3 +65,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+console.log(x) will print 9 because it doesn't change anywhere,
+console.log(y) will print 10 because x is a property of y that sent to function f2
